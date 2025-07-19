@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOPE for the Bright Future</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --yellow: #fcd34d;
+      --green: #10b981;
+      --orange: #fb923c;
+      --black: #111827;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    header {
+      background: var(--black);
+      color: var(--white);
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .site-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    .sidebar-toggle {
+      display: none;
+      background: var(--orange);
+      color: var(--white);
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: none;
+    }
+
+    aside {
+      width: 240px;
+      background: var(--black);
+      color: var(--white);
+      padding: 20px;
+      position: fixed;
+      height: 100vh;
+      top: 70px;
+      left: 0;
+      transition: transform 0.3s ease;
+    }
+
+    aside h2 {
+      color: var(--yellow);
+      margin-bottom: 20px;
+    }
+
+    aside ul {
+      list-style: none;
+    }
+
+    aside ul li {
+      margin: 15px 0;
+    }
+
+    aside ul li a {
+      text-decoration: none;
+      color: var(--white);
+      transition: 0.3s;
+    }
+
+    aside ul li a:hover {
+      color: var(--green);
+    }
+
+    main {
+      margin-left: 240px;
+      padding: 30px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: var(--orange);
+      margin-bottom: 20px;
+    }
+
+    section p, li {
+      font-size: 1rem;
+      color: var(--black);
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: linear-gradient(to right, var(--yellow), var(--green));
+      padding: 50px;
+      border-radius: 15px;
+      color: var(--black);
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--black);
+      color: var(--white);
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: var(--green);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .sidebar-toggle {
+        display: block;
+      }
+
+      aside {
+        transform: translateX(-100%);
+        position: absolute;
+        z-index: 1000;
+      }
+
+      body.sidebar-active aside {
+        transform: translateX(0);
+      }
+
+      main {
+        margin-left: 0;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display: flex; align-items: center;">
+      <img src="logo.png" alt="Logo" class="logo">
+      <div class="site-title">HOPE for the Bright Future Organisation</div>
+    </div>
+    <button class="sidebar-toggle" onclick="document.body.classList.toggle('sidebar-active')">☰ Menu</button>
+  </header>
+
+  <aside>
+    <h2>HOPE Org</h2>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#get-involved">Get Involved</a></li>
+      <li><a href="#team">Our Team</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </aside>
+
+  <main>
+    <section class="hero" id="hero">
+      <h1>Welcome to HOPE for the Bright Future</h1>
+      <p>Empowering communities through education, health, and sustainability. Together, we can build a brighter tomorrow. 🌍</p>
+      <a href="#get-involved" class="btn">Join Us Today</a>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>We are a nonprofit NGO based in Rwanda focused on transforming communities through impactful programs in education, healthcare, agriculture, and youth empowerment.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Our Projects</h2>
+      <ul>
+        <li>📘 Village Learning Centers</li>
+        <li>🩺 Community Health Clinics</li>
+        <li>🌱 Urban Farming Workshops</li>
+        <li>🎓 Youth Mentorship Program</li>
+      </ul>
+    </section>
+
+    <section id="get-involved">
+      <h2>Get Involved</h2>
+      <p>Become a volunteer, sponsor a child, or donate to fund life-changing programs. Every bit helps.</p>
+      <a href="#contact" class="btn">Contact Us</a>
+    </section>
+
+    <section id="team">
+      <h2>Our Team</h2>
+      <p>Meet the heart of the organization: our dedicated volunteers, coordinators, and board members who work daily to bring hope to life.</p>
+    </section>
+
+    <section id="news">
+      <h2>Latest News</h2>
+      <p>📰 New health initiative launched in Nyarugenge district!<br>🗞️ HOPE wins Community Empowerment Award 2025!</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: hopebrightfuture@gmail.com<br>Phone: +250 78 123 456<br>Location: Kigali, Rwanda</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 HOPE for the Bright Future Organisation | Powered by Passion & Purpose
+  </footer>
+</body>
+</html>

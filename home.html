@@ -3,188 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel=" icon" href="pics/logo.jpg" type="icon">
   <title>HOPE for the Bright Future</title>
+  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --yellow: #fcd34d;
-      --green: #10b981;
-      --orange: #fb923c;
-      --black: #111827;
-      --white: #ffffff;
-    }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-      background: var(--white);
-      overflow-x: hidden;
-    }
-
-    header {
-      background: var(--black);
-      color: var(--white);
-      padding: 15px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    .site-title {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-left: 10px;
-    }
-
-    .sidebar-toggle {
-      display: none;
-      background: var(--orange);
-      color: var(--white);
-      padding: 10px 15px;
-      cursor: pointer;
-      border-radius: 5px;
-      border: none;
-    }
-
-    aside {
-      width: 240px;
-      background: var(--black);
-      color: var(--white);
-      padding: 20px;
-      position: fixed;
-      height: 100vh;
-      top: 70px;
-      left: 0;
-      transition: transform 0.3s ease;
-    }
-
-    aside h2 {
-      color: var(--yellow);
-      margin-bottom: 20px;
-    }
-
-    aside ul {
-      list-style: none;
-    }
-
-    aside ul li {
-      margin: 15px 0;
-    }
-
-    aside ul li a {
-      text-decoration: none;
-      color: var(--white);
-      transition: 0.3s;
-    }
-
-    aside ul li a:hover {
-      color: var(--green);
-    }
-
-    main {
-      margin-left: 240px;
-      padding: 30px;
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    section {
-      margin-bottom: 60px;
-    }
-
-    section h2 {
-      font-size: 2rem;
-      color: var(--orange);
-      margin-bottom: 20px;
-    }
-
-    section p, li {
-      font-size: 1rem;
-      color: var(--black);
-      line-height: 1.6;
-    }
-
-    .hero {
-      background: linear-gradient(to right, var(--yellow), var(--green));
-      padding: 50px;
-      border-radius: 15px;
-      color: var(--black);
-      animation: fadeInUp 1s ease-in-out;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background: var(--black);
-      color: var(--white);
-      border-radius: 5px;
-      text-decoration: none;
-      margin-top: 20px;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background: var(--green);
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: var(--black);
-      color: var(--white);
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 768px) {
-      .sidebar-toggle {
-        display: block;
-      }
-
-      aside {
-        transform: translateX(-100%);
-        position: absolute;
-        z-index: 1000;
-      }
-
-      body.sidebar-active aside {
-        transform: translateX(0);
-      }
-
-      main {
-        margin-left: 0;
-        padding: 20px;
-      }
-    }
   </style>
 </head>
 <body>
   <header>
-    <div style="display: flex; align-items: center;">
-      <img src="logo.png" alt="Logo" class="logo">
-      <div class="site-title">HOPE for the Bright Future Organisation</div>
-    </div>
-    <button class="sidebar-toggle" onclick="document.body.classList.toggle('sidebar-active')">☰ Menu</button>
+    <img src="pics/logo.jpg" alt="Logo" class="logo">
+    <div class="site-title" style="margin: left 30%; ;">HOPE for the Bright Future Organisation</div>
+    <div class="sidebar-toggle" onclick="document.body.classList.toggle('sidebar-active')">☰ Menu</div>
   </header>
 
   <aside>
@@ -209,24 +40,82 @@
 
     <section id="about">
       <h2>About Us</h2>
+      <div class="about-images">
+        <img src="pics/about 1.jpg" alt="Community Teaching">
+        <img src="pics/about 2.jpg" alt="Youth Group">
+        <img src="pics/ABOUT 3.jpg" alt="Students Smiling">
+      </div>
       <p>We are a nonprofit NGO based in Rwanda focused on transforming communities through impactful programs in education, healthcare, agriculture, and youth empowerment.</p>
     </section>
 
     <section id="projects">
       <h2>Our Projects</h2>
-      <ul>
-        <li>📘 Village Learning Centers</li>
-        <li>🩺 Community Health Clinics</li>
-        <li>🌱 Urban Farming Workshops</li>
-        <li>🎓 Youth Mentorship Program</li>
-      </ul>
+      <div class="project-cards">
+        <div class="card">
+          <img src="pics/p1.jpg" alt="Village Learning Center">
+          <div class="card-body">
+            <h3>📘 Village Learning Centers</h3>
+            <p>Creating access to quality education through locally-supported learning centers.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pics/P2.jpg" alt="Community Health Clinic">
+          <div class="card-body">
+            <h3>🩺 Community Health Clinics</h3>
+            <p>Improving access to healthcare in underserved communities with mobile and local clinics.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pics/P3.jpg" alt="Urban Farming Workshop">
+          <div class="card-body">
+            <h3>🌱 Urban Farming Workshops</h3>
+            <p>Empowering people to grow food sustainably in urban and peri-urban environments.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pics/P4.jpg" alt="Youth Mentorship">
+          <div class="card-body">
+            <h3>🎓 Youth Mentorship Program</h3>
+            <p>Guiding young people with training, coaching, and leadership development for a better future.</p>
+          </div>
+        </div>
+      </div>
     </section>
+<section id="get-involved" class="get-involved-section">
+  <h2>Get Involved</h2>
+  <p>Join our mission by becoming a volunteer, sponsor, or donor. Fill out the form below and let’s connect! </p>
+  
+  <form class="get-involved-form">
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your full name" required>
+    </div>
 
-    <section id="get-involved">
-      <h2>Get Involved</h2>
-      <p>Become a volunteer, sponsor a child, or donate to fund life-changing programs. Every bit helps.</p>
-      <a href="#contact" class="btn">Contact Us</a>
-    </section>
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="role">I want to...</label>
+      <select id="role" required>
+        <option value="">Select an option</option>
+        <option value="volunteer">Volunteer</option>
+        <option value="sponsor">Sponsor</option>
+        <option value="donate">Donate</option>
+        <option value="partner">Partner with You</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Your Message</label>
+      <textarea id="message" rows="5" placeholder="Say something..."></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+</section>
+
 
     <section id="team">
       <h2>Our Team</h2>

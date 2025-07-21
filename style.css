@@ -1,0 +1,335 @@
+    :root {
+      --yellow: #fcd34d;
+      --green: #10b981;
+      --orange: #fb923c;
+      --black: #111827;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    header {
+      background: var(--black);
+      color: var(--white);
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .site-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .sidebar-toggle {
+      display: none;
+    }
+
+    aside {
+      width: 240px;
+      background: var(--black);
+      color: var(--white);
+      padding: 20px;
+      position: fixed;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      transition: transform 0.3s ease;
+      z-index: 1000;
+    }
+
+    aside h2 {
+      color: var(--yellow);
+      margin-bottom: 20px;
+    }
+
+    aside ul {
+      list-style: none;
+    }
+
+    aside ul li {
+      margin: 15px 0;
+    }
+
+    aside ul li a {
+      text-decoration: none;
+      color: var(--white);
+      transition: 0.3s;
+    }
+
+    aside ul li a:hover {
+      color: var(--green);
+    }
+
+    main {
+      margin-left: 240px;
+      padding: 30px;
+      flex: 1;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: var(--orange);
+      margin-bottom: 20px;
+    }
+
+    section p, li {
+      font-size: 1rem;
+      color: var(--black);
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: linear-gradient(to right, var(--yellow), var(--green));
+      padding: 50px;
+      border-radius: 15px;
+      color: var(--black);
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--black);
+      color: var(--white);
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: var(--green);
+    }
+
+    .about-images {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .about-images img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .about-images img:hover {
+      transform: scale(1.05);
+    }
+
+    .project-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 15px;
+    }
+
+    .card-body h3 {
+      font-size: 1.2rem;
+      color: var(--green);
+      margin-bottom: 10px;
+    }
+
+    .card-body p {
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    .get-involved-section {
+  background: linear-gradient(to right, var(--yellow), var(--green));
+  padding: 60px 20px;
+  border-radius: 10px;
+  margin-top: 40px;
+  animation: fadeInUp 1s ease;
+}
+
+.get-involved-section h2 {
+  color: var(--black);
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.get-involved-section p {
+  color: var(--black);
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.get-involved-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--black);
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid var(--green);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--orange);
+  outline: none;
+}
+
+.submit-btn {
+  background: var(--black);
+  color: var(--white);
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: var(--green);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .sidebar-toggle {
+        display: block;
+        background: var(--orange);
+        color: var(--white);
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-left: auto;
+      }
+
+      aside {
+        transform: translateX(-100%);
+        position: absolute;
+      }
+
+      .sidebar-active aside {
+        transform: translateX(0);
+      }
+
+      main {
+        margin-left: 0;
+        padding: 20px;
+      }
+    }
+@media (max-width: 600px) {
+  .get-involved-form {
+    padding: 20px;
+  }
+
+  .get-involved-section h2 {
+    font-size: 1.6rem;
+  }
+}

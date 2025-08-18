@@ -21,16 +21,18 @@
       overflow-x: hidden;
     }
 
-    header {
+    /* header {
       background: var(--black);
-      color: var(--white);
+
+      color: var(--black);
       padding: 15px 20px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 15px;
       text-align: center;
-    }
+    } */
+
 
     .logo {
       width: 50px;
@@ -188,6 +190,55 @@
       font-size: 0.95rem;
       color: #333;
     }
+
+    #partners {
+  text-align: center;
+  padding: 50px 20px;
+  background: var(--white);
+}
+
+#partners h2 {
+  color: var(--orange);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#partners p {
+  color: var(--black);
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.partner-card {
+  background: var(--yellow);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.partner-card:hover {
+  transform: translateY(-5px);
+}
+
+.partner-card img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.partner-card h3 {
+  color: var(--black);
+  font-size: 1rem;
+}
+
 
     .get-involved-section {
   background: linear-gradient(to right, var(--yellow), var(--green));
